@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreenBack", "GreenBack\GreenBack.csproj", "{F8C5030A-67E8-40FE-A584-5938BAE15C8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Green.Api", "Green.Api\Green.Api.csproj", "{F8C5030A-67E8-40FE-A584-5938BAE15C8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBWeb", "DBWeb\DBWeb.csproj", "{C01CD905-DCB0-41A4-B847-5DBB2436F38C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Green.DB", "Green.DB\Green.DB.csproj", "{C01CD905-DCB0-41A4-B847-5DBB2436F38C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Green.Service", "Green.Service\Green.Service.csproj", "{88669306-6D4B-40D7-B9A8-5DEAD31318A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C01CD905-DCB0-41A4-B847-5DBB2436F38C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C01CD905-DCB0-41A4-B847-5DBB2436F38C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C01CD905-DCB0-41A4-B847-5DBB2436F38C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88669306-6D4B-40D7-B9A8-5DEAD31318A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88669306-6D4B-40D7-B9A8-5DEAD31318A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88669306-6D4B-40D7-B9A8-5DEAD31318A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88669306-6D4B-40D7-B9A8-5DEAD31318A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

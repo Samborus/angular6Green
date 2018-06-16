@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DBWeb
+namespace Green.DB
 {
     public class Class1
     {

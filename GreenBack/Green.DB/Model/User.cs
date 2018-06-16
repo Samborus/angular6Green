@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DBWeb.Model
+namespace Green.DB.Model
 {
     public class User
     {

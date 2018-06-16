@@ -1,10 +1,10 @@
-﻿using DBWeb.Model;
+﻿using Green.DB.Model;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DBWeb.Data
+namespace Green.DB.Data
 {
     public class UsersContext : DbContext
     {

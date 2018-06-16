@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DBWeb.Data
+namespace Green.DB.Data
 {
     public static class DbInitializer
     {

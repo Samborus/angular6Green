@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DBWeb.Data;
-using DBWeb.Model;
-using GreenBack.Model;
+using Green.DB.Data;
+using Green.DB.Model;
+using Green.Api.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GreenBack.Controllers
+namespace Green.Api.Controllers
 {
     [Produces("application/json")]
     [Route("api/User")]
@@ -22,10 +22,11 @@ namespace GreenBack.Controllers
         }
 
         [HttpPost]
-        public string Post([FromBody]UserLogIn value)
+        public bool Post([FromBody]RegisterRequest value)
         {
-            int? pass = _context.Users.Where(u => u.Nick == value.Login).FirstOrDefault()?.ID;
-            return "Token";
+            User user = new User();
+            _context.Users.Add(user);
+            return true;
         }
     }
 }
