@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Green.DB\Green.DB.csproj" />
+    <ProjectReference Include="..\Green.Service\Green.Service.csproj" />
   </ItemGroup>
 
 </Project>

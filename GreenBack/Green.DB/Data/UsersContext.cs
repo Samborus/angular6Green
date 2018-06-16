@@ -1,8 +1,5 @@
 ﻿using Green.DB.Model;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Green.DB.Data
 {

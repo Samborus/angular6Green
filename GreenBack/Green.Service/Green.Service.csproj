@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Green.Api\Green.Api.csproj" />
     <ProjectReference Include="..\Green.DB\Green.DB.csproj" />
   </ItemGroup>
 

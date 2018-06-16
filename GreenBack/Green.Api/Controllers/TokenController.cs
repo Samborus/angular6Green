@@ -11,7 +11,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace Green.Api.Controllers
 {
     [Produces("application/json")]
-    [Route("api/User")]
     public class TokenController : Controller
     {
         private readonly UsersContext _context;
@@ -24,7 +23,7 @@ namespace Green.Api.Controllers
         [HttpPost]
         public string Post([FromBody]UserLogIn value)
         {
-            int? pass = _context.Users.Where(u => u.Nick == value.Login).FirstOrDefault()?.ID;
+            int? pass = _context.Users.Where(u => u.Login == value.Login).FirstOrDefault()?.ID;
             return "Token";
         }
     }

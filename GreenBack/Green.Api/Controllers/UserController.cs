@@ -7,6 +7,7 @@ using Green.DB.Model;
 using Green.Api.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using AutoMapper;
 
 namespace Green.Api.Controllers
 {
@@ -15,18 +16,26 @@ namespace Green.Api.Controllers
     public class UserController : Controller
     {
         private readonly UsersContext _context;
+        private readonly Mapper _mapper;
 
         public UserController(UsersContext context)
         {
             _context = context;
+            //_mapper = new Mapper.M;
         }
 
         [HttpPost]
         public bool Post([FromBody]RegisterRequest value)
         {
-            User user = new User();
-            _context.Users.Add(user);
-            return true;
+            int saved = 0;
+            try
+            {
+                User user = Mapper.Map<RegisterRequest, User>(value);
+                _context.Users.Add(user);
+                saved = _context.SaveChanges();
+            }
+            catch(Exception ex) { }
+            return (saved > 0 ? true : false);
         }
     }
 }
