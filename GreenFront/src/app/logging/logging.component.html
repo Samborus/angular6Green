@@ -1,0 +1,15 @@
+<div *ngIf="!isLogged; then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock>
+<input [(ngModel)]="login" type="text">
+<br/>
+<input [(ngModel)]="pass" type="text">
+<br/>
+<button (click)="TryLogIn()">Log</button>
+{{ loginResult }}
+</ng-template>
+
+
+<ng-template #elseBlock>
+  <a>Logout</a>
+</ng-template>
