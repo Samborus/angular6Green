@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { GenericNumber, MyT } from '../Code/TLogic';
 @Component({
   selector: '[green1]',
   templateUrl: './green1.component.html',
@@ -8,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class Green1Component implements OnInit {
 public name = "some user";
 public surname = "ffel"
+public myGenericNumber: GenericNumber<number>;
   constructor() { }
 
   ngOnInit() {
+    this.myGenericNumber = new GenericNumber<number>();
+    this.myGenericNumber.zeroValue = 0;
+    this.myGenericNumber.add = function(x, y) { return x + y; };
+    this.myGenericNumber.greeting = 'hey';
   }
   onClick(event)
   {
