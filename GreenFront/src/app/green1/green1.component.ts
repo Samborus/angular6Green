@@ -10,6 +10,7 @@ import { LoggingComponent } from '../logging/logging.component';
 export class Green1Component implements OnInit {
 public name = "some user";
 public surname = "ffel"
+public LogonResult: boolean;
 public myGenericNumber: GenericNumber<number>;
   constructor() 
   { 

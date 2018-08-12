@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-logging',
@@ -13,6 +13,8 @@ export class LoggingComponent implements OnInit {
   public pass;
   public isLogged = false;
   public loginResult = "";
+  @Output() LogonEvent = new EventEmitter();
+
   ngOnInit() {
     
   }
@@ -20,6 +22,8 @@ export class LoggingComponent implements OnInit {
   {
     console.log(this.login);    
     console.log(this.pass);
-    this.loginResult = "zle haslo";
+    //this.loginResult = "zle haslo";
+    this.isLogged = true;
+    this.LogonEvent.emit(this.isLogged);
   }
 }
