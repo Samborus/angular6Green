@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 import { Green1Component } from './green1/green1.component';
 import { XTableComponent } from './xtable/xtable.component';
 import { LoggingComponent } from './logging/logging.component';
-import { AppRoutingModule } from './/app-routing.module';
-import { WordComponent } from './word/word.component';
+import { AppRoutingModule, routingComponents } from './/app-routing.module';
 import {PasswordModule} from 'primeng/password';
 import {ButtonModule} from 'primeng/button';
 import { IndexComponent } from './index/index.component';
+import { WordComponent} from './word/word.component';
 
 @NgModule({
   declarations: [
@@ -18,15 +18,14 @@ import { IndexComponent } from './index/index.component';
     Green1Component,
     XTableComponent,
     LoggingComponent,
-    WordComponent,
-    IndexComponent
+    IndexComponent,WordComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
     ButtonModule,
-    PasswordModule
+    PasswordModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
