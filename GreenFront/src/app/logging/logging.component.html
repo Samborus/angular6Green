@@ -1,15 +1,19 @@
 <div *ngIf="!isLogged; then thenBlock; else elseBlock"></div>
 
 <ng-template #thenBlock>
-<input [(ngModel)]="login" type="text">
-<br/>
-<input [(ngModel)]="pass" type="text">
-<br/>
-<button (click)="TryLogIn()">Log</button>
+<div class="ui-g-12 ui-md-4">
+  <div class="ui-inputgroup">
+      <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+      <input [(ngModel)]="login" type="text" pInputText placeholder="Username"/><br/>
+      <span class="ui-inputgroup-addon"><i class="fa fa-key"></i></span>
+      <input [(ngModel)]="pass" type="password" pPassword />  <br>      
+      <button pButton type="button" label="Log in" (click)="TryLogIn()"></button>
+  </div>
+</div>
 {{ loginResult }}
 </ng-template>
 
 
 <ng-template #elseBlock>
-  <a>Logout</a>
+  <a href="#logout" (click)="TryLogout()">Logout</a>  
 </ng-template>

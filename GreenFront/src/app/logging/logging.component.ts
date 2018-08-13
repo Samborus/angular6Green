@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import {ButtonModule} from 'primeng/button';
 
 @Component({
   selector: 'app-logging',
@@ -25,5 +26,11 @@ export class LoggingComponent implements OnInit {
     //this.loginResult = "zle haslo";
     this.isLogged = true;
     this.LogonEvent.emit(this.isLogged);
+  }
+  TryLogout()
+  {
+    this.isLogged = false;
+    this.LogonEvent.emit(this.isLogged);
+    console.log(this.isLogged = false);  
   }
 }
