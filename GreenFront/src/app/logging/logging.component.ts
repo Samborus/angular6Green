@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {ButtonModule} from 'primeng/button';
+import { Router, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-logging',
@@ -8,7 +9,7 @@ import {ButtonModule} from 'primeng/button';
 })
 export class LoggingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   public login;
   public pass;
@@ -26,11 +27,13 @@ export class LoggingComponent implements OnInit {
     //this.loginResult = "zle haslo";
     this.isLogged = true;
     this.LogonEvent.emit(this.isLogged);
+    this.router.navigate(['word'])
   }
   TryLogout()
   {
     this.isLogged = false;
     this.LogonEvent.emit(this.isLogged);
     console.log(this.isLogged = false);  
+    this.router.navigate(['index'])
   }
 }

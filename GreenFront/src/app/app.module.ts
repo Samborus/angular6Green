@@ -18,7 +18,9 @@ import { WordComponent} from './word/word.component';
     Green1Component,
     XTableComponent,
     LoggingComponent,
-    IndexComponent,WordComponent
+ routingComponents,
+IndexComponent,
+WordComponent, 
   ],
   imports: [
     AppRoutingModule,

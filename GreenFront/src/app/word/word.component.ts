@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Word } from 'src/app/Model/Word';
 
 @Component({
   selector: 'app-word',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WordComponent implements OnInit {
 
+  public model: Word;
+  
   constructor() { }
 
   ngOnInit() {

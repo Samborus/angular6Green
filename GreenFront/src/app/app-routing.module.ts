@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { WordComponent } from './word/word.component';
-
+import { IndexComponent } from './index/index.component'
 
 const routes: Routes = [
-  { path: 'word', component: WordComponent }
+  { path: '', component: IndexComponent },
+  { path: 'word', component: WordComponent },
+  { path: 'index', component: IndexComponent },
+  { path: '**', component: IndexComponent }   
 ];
 
 @NgModule({
@@ -12,4 +15,4 @@ const routes: Routes = [
   exports: [ RouterModule ]
 })
 export class AppRoutingModule { }
-export const routingComponents = [ WordComponent ]
+export const routingComponents = [ WordComponent, IndexComponent ]
