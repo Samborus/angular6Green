@@ -1,9 +1,34 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    The {{ title }} project 2018
-  </h1>
-  <app-logging></app-logging>
-  <div index><router-outlet></router-outlet></div>
+<header id="header"><p>Word test Online</p></header>
+
+<div id="container">
+
+  <main id="center" class="column">
+    <article>
+    
+        <div index><router-outlet></router-outlet></div>
+    
+    </article>								
+  </main>
+
+  <nav id="left" class="column">
+    <h3>Left heading</h3>
+    <ul>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li><a href="#">Link 3</a></li>
+      <li><a href="#">Link 4</a></li>
+      <li><a href="#">Link 5</a></li>
+    </ul>
+  </nav>
+
+  <div id="right" class="column">
+    <app-logging></app-logging>
   </div>
+
+</div>
+
+<div id="footer-wrapper">
+  <footer id="footer"><p>Footer...</p></footer>
+</div>
+
 

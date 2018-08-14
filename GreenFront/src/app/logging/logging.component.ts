@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import {ButtonModule} from 'primeng/button';
 import { Router, Routes } from '@angular/router';
 
 @Component({
