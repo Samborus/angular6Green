@@ -1,12 +1,11 @@
 import { WordType} from '../Model/WordType';
 
-export class Word
+export interface IWord
 {
     Id: number;
     English: string;
-    PolishShort: string;
     PolishLong: string[]; 
-    SntenceId: number[];
+    SentenceId: number[];
     Type: WordType;
     Added: Date;
 }

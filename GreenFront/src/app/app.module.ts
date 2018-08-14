@@ -13,7 +13,7 @@ import { CalendarModule, SharedModule} from 'primeng/primeng';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IndexComponent } from './index/index.component';
 import { WordComponent} from './word/word.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +31,8 @@ WordComponent,
     SharedModule,
     PanelModule,
     BrowserAnimationsModule,
-    PasswordModule    
+    PasswordModule,
+    HttpClientModule    
   ],
   providers: [],
   bootstrap: [AppComponent]

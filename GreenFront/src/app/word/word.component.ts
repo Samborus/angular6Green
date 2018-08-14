@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Word } from 'src/app/Model/Word';
+import { IWord } from 'src/app/Model/Word';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { Word } from 'src/app/Model/Word';
 })
 export class WordComponent implements OnInit {
 
-  public model: Word;
+  public model: IWord;
 
   constructor() { }
 
